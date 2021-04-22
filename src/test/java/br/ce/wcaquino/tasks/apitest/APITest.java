@@ -11,15 +11,7 @@ public class APITest {
 	
 	@BeforeClass
 	public static void setup() {
-<<<<<<< HEAD
-<<<<<<< HEAD
 		RestAssured.baseURI = "http://192.168.0.120:8001/tasks-backend";
-=======
-		RestAssured.baseURI = "http://localhost:8001/tasks-backend";
->>>>>>> parent of f1a527a... Fixed URL
-=======
-		RestAssured.baseURI = "http://localhost:8001/tasks-backend";
->>>>>>> parent of f1a527a... Fixed URL
 	}
 
 	@Test
