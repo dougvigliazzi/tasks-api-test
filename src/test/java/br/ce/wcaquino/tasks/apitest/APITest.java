@@ -12,7 +12,11 @@ public class APITest {
 	@BeforeClass
 	public static void setup() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		RestAssured.baseURI = "http://192.168.0.120:8001/tasks-backend";
+=======
+		RestAssured.baseURI = "http://localhost:8001/tasks-backend";
+>>>>>>> parent of f1a527a... Fixed URL
 =======
 		RestAssured.baseURI = "http://localhost:8001/tasks-backend";
 >>>>>>> parent of f1a527a... Fixed URL
@@ -53,28 +57,28 @@ public class APITest {
 		;
 	}
 	
-	@Test
-	public void deveRemoverTarefaComSucesso() {
-		//inserir
-		Integer id = RestAssured.given()
-			.body("{ \"task\": \"Tarefa para remoção\", \"dueDate\": \"2020-12-30\" }")
-			.contentType(ContentType.JSON)
-		.when()
-			.post("/todo")
-		.then()
-			.log().all()
-			.statusCode(201)
-			.extract().path("id")
-		;
-		
-		System.out.println(id);
-		
-		//remover
-		RestAssured.given()
-		.when()
-			.delete("/todo/"+id)
-		.then()
-			.statusCode(204)
-		;
-	}
+//	@Test
+//	public void deveRemoverTarefaComSucesso() {
+//		//inserir
+//		Integer id = RestAssured.given()
+//			.body("{ \"task\": \"Tarefa para remoção\", \"dueDate\": \"2020-12-30\" }")
+//			.contentType(ContentType.JSON)
+//		.when()
+//			.post("/todo")
+//		.then()
+//			.log().all()
+//			.statusCode(201)
+//			.extract().path("id")
+//		;
+//		
+//		System.out.println(id);
+//		
+//		//remover
+//		RestAssured.given()
+//		.when()
+//			.delete("/todo/"+id)
+//		.then()
+//			.statusCode(204)
+//		;
+//	}
 }
